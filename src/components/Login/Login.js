@@ -48,15 +48,26 @@ function Login() {
         <form className="Auth-form">
           <div className="Auth-form-content" style={{ "position": "relative" }}>
             <div className="text-center">
-              <img src={logo} height="105px" width="185px" />
+              <img
+                src={logo}
+                style={{
+                  "maxWidth": "120px",
+                  "width": "100%",
+                  "height": "auto",
+                }}
+              />
             </div>
             <h3
               className="Auth-form-title"
-              style={{ "position": "absolute", "top": "66px", "left": "169px" }}
+              style={{
+                "position": "absolute",
+                "top": "110px",
+                "left": "169px",
+              }}
             >
               Sign In
             </h3>
-            <div className="form-group mt-3">
+            <div className="form-group mt-1">
               <input
                 style={{ color: "black" }}
                 type="email"
