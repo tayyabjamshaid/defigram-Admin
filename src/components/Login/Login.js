@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Button } from "reactstrap";
-import logo from "assets/img/da.jpeg";
+import logo from "assets/img/def.png";
 import { fetchUsers } from "Reducers/userAuth";
 
 function Login() {
@@ -46,11 +46,16 @@ function Login() {
     <div>
       <div className="Auth-form-container">
         <form className="Auth-form">
-          <div className="Auth-form-content">
+          <div className="Auth-form-content" style={{ "position": "relative" }}>
             <div className="text-center">
-              <img src={logo} height="75px" width="85px" />
+              <img src={logo} height="105px" width="185px" />
             </div>
-            <h3 className="Auth-form-title">Sign In</h3>
+            <h3
+              className="Auth-form-title"
+              style={{ "position": "absolute", "top": "66px", "left": "169px" }}
+            >
+              Sign In
+            </h3>
             <div className="form-group mt-3">
               <input
                 style={{ color: "black" }}
