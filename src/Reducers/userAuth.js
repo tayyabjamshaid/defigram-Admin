@@ -10,7 +10,7 @@ export const fetchUsers = createAsyncThunk(
     try {
       const { email, password } = dataEmail;
       const { data } = await Axios.post(
-        "http://ec2-18-117-195-171.us-east-2.compute.amazonaws.com:3000/adminAuthentication/api/adminAuth",
+        "http://18.117.195.171:3000/adminAuthentication/api/adminAuth",
         { email, password }
       );
       localStorage.setItem("saved", new Date().getTime());
