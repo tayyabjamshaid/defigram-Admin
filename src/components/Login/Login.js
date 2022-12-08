@@ -15,7 +15,7 @@ function Login() {
   const dispatch = useDispatch();
   const history = useHistory();
   const { userInfo, error } = useSelector((state) => state.authData);
-
+  // let check = document.querySelector(".form-control.is-valid");
   const submitForm = (e) => {
     e.preventDefault();
     let re =

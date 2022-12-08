@@ -6,7 +6,7 @@ export const fetchReportedGroups = createAsyncThunk(
   async (_, { getState }) => {
     const getToken = getState();
     let { data } = await Axios.get(
-      "https://defigram-app.herokuapp.com/admin/api/getAllReportedGroups",
+      "http://ec2-18-117-195-171.us-east-2.compute.amazonaws.com:3000/admin/api/getAllReportedGroups",
       {
         headers: { Authorization: `${getToken.authData.userInfo.data}` },
       }
@@ -44,7 +44,7 @@ export const blockFromAllGroupPage = createAsyncThunk(
       const getToken = getState();
       const { user_id, status, blocked_for, page, blocked_reason } = dataBlock;
       const { data } = await Axios.post(
-        "https://defigram-app.herokuapp.com/admin/api/blockGrouoo", //change
+        "http://ec2-18-117-195-171.us-east-2.compute.amazonaws.com:3000/admin/api/blockGrouoo", //change
         { user_id, blocked_for, blocked_reason },
         {
           headers: { Authorization: `${getToken.authData.userInfo.data}` },

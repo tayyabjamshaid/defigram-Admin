@@ -6,13 +6,14 @@ export const fetchallUsers = createAsyncThunk(
   async (_, { getState }) => {
     try {
       const getToken = getState();
+      console.log(getToken.authData.userInfo.data);
       let { data } = await Axios.get(
-        "https://defigram-app.herokuapp.com/admin/api/getAllRegisteredUsers",
+        "http://ec2-18-117-195-171.us-east-2.compute.amazonaws.com:3000/admin/api/getAllRegisteredUsers",
         {
           headers: { Authorization: `${getToken.authData.userInfo.data}` },
         }
       );
-
+      console.log(data.data);
       let userArray = Array.from(data.data);
       //sort data alphabatically start
       let newData = [...userArray];
@@ -40,7 +41,7 @@ export const blockUserPage = createAsyncThunk(
       const { user_id, status, blocked_for, page, blocked_reason } = dataBlock;
       // const { data } =
       await Axios.post(
-        "https://defigram-app.herokuapp.com/admin/api/blockUser",
+        "http://ec2-18-117-195-171.us-east-2.compute.amazonaws.com:3000/admin/api/blockUser",
         { user_id, blocked_for, blocked_reason },
         {
           headers: { Authorization: `${getToken.authData.userInfo.data}` },

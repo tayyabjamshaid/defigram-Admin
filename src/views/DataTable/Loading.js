@@ -5,7 +5,7 @@ export default function Loading({ purpose }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       checkData(false);
-    }, 2000);
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
   return (

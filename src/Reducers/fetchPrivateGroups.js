@@ -7,7 +7,7 @@ export const fetchPrivateGroups = createAsyncThunk(
     try {
       const getToken = getState();
       let { data } = await Axios.get(
-        "https://defigram-app.herokuapp.com/admin/api/allGroups",
+        "http://ec2-18-117-195-171.us-east-2.compute.amazonaws.com:3000/admin/api/allGroups",
         {
           headers: { Authorization: `${getToken.authData.userInfo.data}` },
         }
